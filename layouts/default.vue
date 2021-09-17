@@ -2,6 +2,7 @@
     <div>
        <SideBar/>
        <NavBar/>
+       <Main />
         <Nuxt />
     </div>
 </template>

@@ -1,10 +1,15 @@
 <template>
-<div>
-   <SideBar/>
-   <NavBar/>
+<div class='container'>
+   
   </div>
 </template>
 
 <script>
 export default {}
 </script>
+
+<style scoped>
+
+
+
+</style>

@@ -28,11 +28,11 @@
 .side-bar{
     position:absolute;
     margin:0;
-    height:100vh;
-    width:20rem;
-    background: #E5E5E5;
+    height:100%;
+    width:17rem;
+    background: #DDDDFF;
     margin:0;
-    z-index:-1;
+    z-index:2;
 
 }
 .image{
