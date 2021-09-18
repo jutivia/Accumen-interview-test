@@ -1,7 +1,7 @@
 <template>
     <div class='container'>
             <div class="wrapper">
-                love ya
+                <ElephantsCardDisplay/>
             </div>
     </div>
 </template>
@@ -34,5 +34,13 @@
     height:85%;
     padding:1.5rem;
     box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.25);
+}
+@media screen and (max-width:580px){
+    .container{
+        left:12rem;
+    }
+    .wrapper{
+        width:58%;
+    }
 }
 </style>

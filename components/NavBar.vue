@@ -1,14 +1,17 @@
 <template>
     <div class='nav-bar'>
+        <div v-if="this.$store.state.clickedState">
+            <h6>Accumen Digital Interview Task / Elephantom > Elephant</h6>
+        </div>
+        <div v-else>
         <h6>Accumen Digital Interview Task / Elephantom</h6>
+        </div>
     </div>
 </template>
 
 <script>
-    export default {
-        // props=[
-        //     "name"
-        // ]
+      export default {
+        
     }
 </script>
 
@@ -26,13 +29,17 @@
     color: #30425A;
     z-index:1;
     background-color:white;
+    max-height:3.8rem;
 }
 h6{
     margin-left:18rem; 
 }
-@media screen and (max-width:480px){
+@media screen and (max-width:580px){
     h6{
         margin-left:13rem;
+        font-size:14px;
+        line-height: 16px;
+        font-weight:bold;
     }
 }
 </style>

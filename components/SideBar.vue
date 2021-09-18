@@ -1,26 +1,25 @@
 <template>
-    <div class='side-bar'>
+    <NuxtLink to='/' class='side-bar' >
        <div class='elephant-logo'>
            <img src="@/assets/images/elephantLogo.svg" class="image"/>
           </div> 
        <div class="modal"> 
-           <h5  class='clicked item' >Home</h5>
-           <h5  class='item'>Modal</h5>
+           <h5  class='item' 
+           :class="[!this.$store.state.clickedState? 'clicked':'']"
+            @click='updateClass'>Home</h5>
+           <h5  class='item' :class="[this.$store.state.clickedState? 'clicked':'']">Modal</h5>
        </div>
-    </div>
+    </NuxtLink>
 </template>
 
 <script>
     export default {
-        data(){
-            return{
-                data:[
-                {name:"Home",
-                id: 1},
-                {name:"Modal",
-                id:2}]
-            }
-        }
+         methods:{
+             updateClass(){
+                 return this.$store.commit("setClickedState", false) 
+             }
+             }
+      
     }
 </script>
 
@@ -62,7 +61,7 @@ background: #FFFFFF;
     font-size: 18px;
     line-height: 28px;
 }
-@media screen and (max-width:480px){
+@media screen and (max-width:580px){
 .side-bar{
     width:12rem;
 }
