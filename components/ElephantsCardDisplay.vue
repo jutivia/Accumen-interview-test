@@ -2,7 +2,7 @@
     <div class='container'>
         
             <table>
-                <tr class='white row bold'> <td colspan='6'>All Elephants</td> </tr>
+                <tr class='white bold row'> <td colspan='6'>All Elephants</td> </tr>
                     <tr class='darkerRow row'>
                         <th>S/N</th>
                         <th>Name</th>
