@@ -57,7 +57,7 @@
         margin:10px 0;
         height:400px;
         object-fit:fill;
-        filter: drop-shadow(linear-gradient(180deg, rgba(196, 196, 196, 0) -1.55%, rgba(29, 29, 242, 0.37) 77.84%));
+        box-shadow: inset (linear-gradient(180deg, rgba(196, 196, 196, 0) -1.55%, rgba(29, 29, 242, 0.37) 77.84%));
         
     }
     
