@@ -1,7 +1,8 @@
 <template>
-    <div>
+    <div class='container'>
+        
             <table>
-                <tr> All Elephants </tr>
+                <tr class='white row bold'> <td colspan='6'>All Elephants</td> </tr>
                     <tr class='darkerRow row'>
                         <th>S/N</th>
                         <th>Name</th>
@@ -10,20 +11,20 @@
                         <th>Affiliation</th>
                         <th>Dob</th>
                     </tr>
-        <tr v-for="(elephant, index) in elephantList.slice(0,8)" 
+        <tr v-for="(elephant, index) in elephantList.slice(8,16)" 
          :key="elephant._id"
          class='row'
-         :class='[index%2!==0? "darkRow": ""]'
+         :class='[index%2!==0? "darkRow": "white"]'
          @click="clickedRow"
-         ><NuxtLink :to="`/elephants/${elephant._id}`"> 
-         <td>{{index +1}}</td>
-                <td>{{elephant.name}}</td>
-                <td>{{elephant.species}}</td>
-                <td>{{elephant.sex}}</td>
-                <td>{{elephant.affiliation}}</td>
-                <td>{{elephant.dob}}</td>
-            </NuxtLink>        
+         >
+         <td> <NuxtLink :to="`/elephants/${elephant._id}`">{{index +1}} </NuxtLink></td>
+                <td><NuxtLink :to="`/elephants/${elephant._id}`">{{elephant.name}}</NuxtLink></td>
+                <td> <NuxtLink :to="`/elephants/${elephant._id}`">{{elephant.species}} </NuxtLink></td>
+                <td> <NuxtLink :to="`/elephants/${elephant._id}`">{{elephant.sex}} </NuxtLink></td>
+                <td> <NuxtLink :to="`/elephants/${elephant._id}`">{{elephant.affiliation}} </NuxtLink></td>
+                <td> <NuxtLink :to="`/elephants/${elephant._id}`">{{elephant.dob}} </NuxtLink></td>
          </tr>
+          
          </table>
     </div>
 </template>
@@ -42,17 +43,22 @@ let url="https://acumen-elephantom.herokuapp.com/elephants"
              const response = await fetch(url).then(res=>res.json())
          return this.elephantList = response.data 
       },
-      computed:{
-            setElephants(){
-             this.$store.commit("setElephantList", "this.elephantList")
-            
-         },
-      },
+    //   computed: {
+    //           setData(){
+    //         this.$store.commit({
+    //              type:"setElephantList",
+    //              data: this.elephantList})
+    //      }
+           
+    //   },
      methods:{
          clickedRow(){
              this.$store.commit("setClickedState", true) 
-             console.log(this.elephantList)
-         }
+              this.$store.commit({
+               type:"setElephantList",
+                 data: this.elephantList})
+         },
+        
         
      }
               
@@ -62,6 +68,21 @@ let url="https://acumen-elephantom.herokuapp.com/elephants"
 </script>
 
 <style scoped>
+.container{
+    width:85%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:95%;
+    margin-top:2.5rem;
+    margin-left:-2.5rem;
+   
+    
+
+}
+.bold{
+font-weight:bold;
+}
 .spinner{
     display:flex;
     justify-content:center;
@@ -75,7 +96,6 @@ font-weight:400;
 font-size:15px;
 line-height:24.51px;
 color:#848383;
-padding:1rem;
 margin:0 0;
 text-align:left;
 
@@ -85,9 +105,37 @@ text-align:left;
 background-color:#F5F5F5;
 
 }
-
+.white{
+    background-color:white;
+    vertical-align:center;
+   
+}
 .darkerRow{
 background-color:#E5E5E5;
 color:black;
+}
+
+table{
+width:90%;
+box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.25);
+height:80%;
+align-self:center;
+margin-top:1rem;
+margin-left:auto;
+margin-right:auto;
+}
+
+th, td{
+    padding:0.6rem;
+    max-width:80px;
+    width:auto;
+}
+td{
+    height:8%;
+    vertical-align:center;
+}
+tr{
+     height:10%;
+     padding:.5rem;
 }
 </style>

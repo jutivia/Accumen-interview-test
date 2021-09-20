@@ -33,6 +33,7 @@
 }
 h6{
     margin-left:18rem; 
+    font-size:18px;
 }
 @media screen and (max-width:580px){
     h6{

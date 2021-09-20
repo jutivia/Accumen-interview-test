@@ -16,9 +16,10 @@
     display:flex;
     justify-content:center;
     align-items:space-around;
-    margin:0 20%;
+    margin:0rem 22%;
     padding:10% 5%;
     width:70%;
+    padding-top:8rem;
 
 }
 h1{
@@ -31,7 +32,7 @@ h1{
 }
 .found{
     font-size:62px;
-    color:rgb(71, 70, 70);
+    color:rgb(133, 132, 132)
    
     
 }

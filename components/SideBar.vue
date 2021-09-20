@@ -1,15 +1,15 @@
 <template>
-    <NuxtLink to='/' class='side-bar' >
+    <div class='side-bar' >
        <div class='elephant-logo'>
            <img src="@/assets/images/elephantLogo.svg" class="image"/>
           </div> 
        <div class="modal"> 
-           <h5  class='item' 
+         <NuxtLink to='/'>  <h5  class='item' 
            :class="[!this.$store.state.clickedState? 'clicked':'']"
-            @click='updateClass'>Home</h5>
-           <h5  class='item' :class="[this.$store.state.clickedState? 'clicked':'']">Modal</h5>
+            @click='updateClass'>Home</h5></NuxtLink>
+         <NuxtLink to='/elephants/5cf1d0db3cfbe0fcbb6c4c93'>  <h5  class='item' @clicked="selectClass" :class="[this.$store.state.clickedState? 'clicked':'']">Modal</h5></NuxtLink>
        </div>
-    </NuxtLink>
+    </div>
 </template>
 
 <script>
@@ -17,6 +17,9 @@
          methods:{
              updateClass(){
                  return this.$store.commit("setClickedState", false) 
+             },
+             selectClass(){
+                 return this.$store.commit("setClickedState", true) 
              }
              }
       

@@ -8,7 +8,7 @@ export const mutations={
         state.clickedState= payload;
     },
     setElephantList(state, payload){
-        state.elephantList= payload;
+        state.elephantList= payload.data;
     }
 }
 export const getters = {

@@ -8,6 +8,7 @@
 
 <script>
     export default {
+         
         
     }
 </script>
@@ -25,16 +26,10 @@
   justify-content:center;
   align-items:center;
   padding:2rem;
+  margin:0 0;
 
 }
-.wrapper{
-    margin-top:4.1rem;
-    background-color:white;
-    width:85%;
-    height:85%;
-    padding:1.5rem;
-    box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.25);
-}
+
 @media screen and (max-width:580px){
     .container{
         left:12rem;
