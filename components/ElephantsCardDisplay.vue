@@ -116,9 +116,9 @@ color:black;
 }
 
 table{
-width:90%;
+width:80%;
 box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.25);
-height:80%;
+height:90%;
 align-self:center;
 margin-top:1rem;
 margin-left:auto;
