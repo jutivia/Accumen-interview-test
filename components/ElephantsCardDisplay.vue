@@ -75,7 +75,9 @@ let url="https://acumen-elephantom.herokuapp.com/elephants"
     align-items:center;
     height:95%;
     margin-top:2.5rem;
-    margin-left:-2.5rem;
+    margin-left:auto;
+    margin-right:auto;
+    
    
     
 
@@ -121,7 +123,7 @@ box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.25);
 height:90%;
 align-self:center;
 margin-top:1rem;
-margin-left:auto;
+margin-left:-1rem;
 margin-right:auto;
 }
 
