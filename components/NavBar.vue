@@ -1,7 +1,7 @@
 <template>
     <div class='nav-bar'>
         <div v-if="this.$store.state.clickedState">
-            <h6><NuxtLink to='/' >Accumen Digital Interview Task / Elephantom</NuxtLink> > Elephant</h6>
+            <h6>Accumen Digital Interview Task / Elephantom > Elephant</h6>
         </div>
         <div v-else>
         <h6>Accumen Digital Interview Task / Elephantom</h6>
