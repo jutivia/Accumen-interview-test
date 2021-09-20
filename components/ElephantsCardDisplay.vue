@@ -116,7 +116,7 @@ color:black;
 }
 
 table{
-width:80%;
+width:87%;
 box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.25);
 height:90%;
 align-self:center;
